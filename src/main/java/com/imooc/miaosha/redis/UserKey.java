@@ -8,4 +8,7 @@ public class UserKey extends BasePrefix {
 	
 	public static UserKey getById =new UserKey("id");
 	public static UserKey getByName =new UserKey("Name");
+	public static void main(String[] args) {
+		System.out.println(UserKey.getById.getPrefix());
+	}
 }

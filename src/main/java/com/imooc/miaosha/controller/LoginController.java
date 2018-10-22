@@ -1,4 +1,5 @@
 package com.imooc.miaosha.controller;
+import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 
 import org.slf4j.Logger;
@@ -38,7 +39,7 @@ public class LoginController {
 	}
 	@RequestMapping("/do_login")
 	@ResponseBody
-	public  Result<Boolean> doLogin(@Valid LoginVo vo) {
+	public  Result<Boolean> doLogin(HttpServletResponse response,@Valid LoginVo vo) {
 		log.info(vo.toString());
 		//参数校验
 //		String passInput=vo.getPassword();
@@ -53,7 +54,7 @@ public class LoginController {
 //			return Result.error(CodeMsg.MOBILE_ERROR);
 //		}
 		//登陆
-		CodeMsg cm = userService.login(vo);
+		CodeMsg cm = userService.login(response,vo);
 		if(cm.getCode()==0) {
 			return Result.success(true);
 		}else {
