@@ -26,6 +26,7 @@ public class GlobleExceptionHandler {
 			String msg= error.getDefaultMessage();
 			return Result.error(CodeMsg.Bind_ERROR.fillArgs(msg));
 		}else {
+			System.err.println(e.getMessage());
 			return Result.error(CodeMsg.SERVER_ERROR);
 		}
 	}

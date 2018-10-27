@@ -20,6 +20,8 @@ public class CodeMsg {
 	//订单模块 5004XX
 	
 	//秒杀模块 5005XX
+	public static CodeMsg MIAOSHA_FALIURE = new CodeMsg(500501, "库存不足");
+	public static CodeMsg REPEAT_ERROR = new CodeMsg(500502, "你已經秒杀过了");
 	
 	
 	public CodeMsg fillArgs(Object... args) {

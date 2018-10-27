@@ -9,11 +9,13 @@ import org.springframework.stereotype.Service;
 import com.alibaba.druid.util.StringUtils;
 import com.imooc.miaosha.dao.MiaoshaUserDao;
 import com.imooc.miaosha.domain.MiaoshaUser;
+import com.imooc.miaosha.domain.OrderInfo;
 import com.imooc.miaosha.redis.MiaoShaUserKey;
 import com.imooc.miaosha.redis.RedisService;
 import com.imooc.miaosha.result.CodeMsg;
 import com.imooc.miaosha.util.MD5Util;
 import com.imooc.miaosha.util.UUIDUtil;
+import com.imooc.miaosha.vo.GoodsVo;
 import com.imooc.miaosha.vo.LoginVo;
 
 @Service
@@ -98,5 +100,15 @@ public class MiaoshaUserService {
 		//更新完毕
 		return miaoshaUser;
 	}
-
+	/**
+	 * 更新库存生成订单
+	 * @param user
+	 * 
+	 * @param good
+	 * @return
+	 */
+	public OrderInfo miaosha(MiaoshaUser user, GoodsVo good) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
